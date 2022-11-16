@@ -5,3 +5,7 @@
 python3 -m venv env
 source env/bin/activate
 pip -r requerimientos.txt
+
+## Recursos
+
+http://www.rmboot.com/RedBlack.html
