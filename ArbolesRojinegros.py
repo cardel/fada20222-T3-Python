@@ -2,6 +2,7 @@
 Clase para arboles rojinegros
 """
 
+
 class ArbolRojinegro:
     def __init__(self, izq, der, value, black):
         self.izq = izq
@@ -10,41 +11,39 @@ class ArbolRojinegro:
         self.black = black
 
     def insertar(self, x):
-        raise NotImplemented
+        raise NotImplementedError
 
     def maximo(self):
-        raise NotImplemented
+        raise NotImplementedError
 
     def minimo(self):
-        raise NotImplemented
+        raise NotImplementedError
 
     def search(self, x):
-        raise NotImplemented
+        raise NotImplementedError
 
     def rotacionDerecha(self, x):
-        raise NotImplemented
+        raise NotImplementedError
 
     def rotacionIzquierda(self, x):
-        raise NotImplemented
+        raise NotImplementedError
 
-    """
-    Area de pruebas
-    """
+    #Area de pruebas
     def bfs(self):
         salida = ""
         separador = ""
         cola = []
         cola.append(self)
 
-        while(len(cola)>0):
+        while len(cola) > 0:
             nodo = cola.pop(0)
             salida += separador + str(nodo.value)
             separador = " "
 
-            if nodo.izq != None:
+            if nodo.izq is not None:
                 cola.append(nodo.izq)
 
-            if nodo.der != None:
+            if nodo.der is not None:
                 cola.append(nodo.der)
 
         return salida
@@ -53,15 +52,13 @@ class ArbolRojinegro:
         recorrido = ""
         separador = ""
 
-        if self.izq != None:
+        if self.izq is not None:
             recorrido += self.izq.inorden()
             separador = " "
 
         recorrido += separador + str(self.value)
 
-        if self.der != None:
+        if self.der is not None:
             recorrido += " " + self.der.inorden()
 
         return recorrido
-
-
