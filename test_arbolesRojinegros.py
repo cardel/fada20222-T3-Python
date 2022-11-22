@@ -68,10 +68,10 @@ def test_minimo(gen_arboles):
 def test_search(gen_arboles):
     arb1, arb2, arb3, arb4 = gen_arboles
 
-    assert arb1.search(5).getValor() == 1
+    assert arb1.search(5).getValor() == 5
     assert arb2.search(6).getValor() == 6
-    assert arb3.search(3).getValor() == 1
-    assert arb4.search(9).getValor() == 1
+    assert arb3.search(3).getValor() == 3
+    assert arb4.search(9).getValor() == 9
 
 
 def test_rotacionIzquierda(gen_arboles):
