@@ -18,8 +18,14 @@ http://www.rmboot.com/RedBlack.html
 
 Se ha agregado una referencia al padre en las pruebas, puede hacer este cambio para tener el nodo padre
 
-```java
-@Getter
-@Setter
-private ArbolRojinegro father;
+```python
+def __init__(self, izq, der, value, black):
+    self.izq = izq
+    self.der = der
+    self.value = value
+    self.black = black
+    self.father = None;
+
+def setFather(self, father):
+    self.father = father;
 ```
