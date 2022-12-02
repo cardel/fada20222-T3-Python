@@ -107,7 +107,7 @@ class RojinegroGenerador:
 
         nodoIzq.setFather(raiz)
         nodoDer.setFather(raiz)
-        nodoIzqDer.setFather(nodoDer)
+        nodoIzqDer.setFather(nodoIzq)
         nodoIzqIzq.setFather(nodoIzq)
         return raiz
 
@@ -144,6 +144,6 @@ class RojinegroGenerador:
 
         nodoIzq.setFather(raiz)
         nodoDer.setFather(raiz)
-        nodoIzqDer.setFather(nodoDer)
+        nodoIzqDer.setFather(nodoIzq)
         nodoIzqIzq.setFather(nodoIzq)
         return raiz
