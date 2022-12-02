@@ -94,13 +94,13 @@ def test_rotacionDerecha(gen_arboles):
     _, _, arb3, arb4 = gen_arboles
 
     # Execute
-    arb3.rotacionDerecha(4)
+    arb3.rotacionDerecha(2)
 
     #  Assert
     assert arb3.bfs() == "2 1 4 3 5"
 
     # Execute
-    arb4.rotacionIzquierda(8)
+    arb4.rotacionIzquierda(5)
 
     # Assert
     assert arb4.bfs() == "5 1 8 6 9"
