@@ -58,10 +58,23 @@ def test_insertar():
     for n in numB:
         instanciaB.insertar(n)
 
-    assert altura(instancia) <= 2 * math.log2(20) + 1
+    assert altura(instanciaB) <= 2 * math.log2(20) + 1
 
     assert instanciaB.inorden(), "-32 -22 -14 -9 -7 -1 0 1 2 3 7 9 13 14 17 19 20 22 33 50 66"
 
+    instanciaC = ArbolRojinegro(None, None, -1, True)
+
+    for i in range(0, 500):
+        instanciaC.insertar(i)
+
+    assert altura(instanciaC) <= 2 * math.log2(500) + 1
+
+    instanciaD = ArbolRojinegro(None, None, -1, True)
+
+    for i in range(0, 500):
+        instanciaD.insertar(i)
+
+    assert altura(instanciaD) <= 2 * math.log2(500) + 1
 
 def test_maximo(gen_arboles):
     arb1, arb2, arb3, arb4 = gen_arboles
